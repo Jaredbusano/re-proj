@@ -78,8 +78,9 @@
             cursor: pointer;
         }
         .hero-img {
-            width: 400px;
-            max-width: 90%;
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
         }
         footer {
             text-align: center;
@@ -111,12 +112,9 @@
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('register') }}" class="secondary">Register</a>
         </div>
-        <div class="read-more">
-            Read More ↓
-        </div>
     </div>
     <div>
-        <img src="{{ asset('images/elearning.png') }}" alt="E-Learning" class="hero-img">
+        <img src="{{ asset('img/welcomelogo.png') }}" alt="Logo" class="hero-img">
     </div>
 </section>
 
