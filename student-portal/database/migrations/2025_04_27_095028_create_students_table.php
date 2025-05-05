@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
             $table->string('student_id')->unique();
+            $table->integer('age')->nullable(); // Adding 'age' (optional if not always present)
+            $table->string('course')->nullable(); // Adding 'course' (optional if not always present)
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Linking to users table, cascade delete
             $table->string('first_name');
             $table->string('last_name');
             $table->date('date_of_birth');
