@@ -18,10 +18,7 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                     <nav class="flex space-x-1 bg-white/10 rounded-lg p-1">
-                        <a href="#" class="px-4 py-2 text-sm font-medium rounded-md hover:bg-white/20 transition-colors">Mail</a>
                         <a href="#" class="px-4 py-2 text-sm font-medium rounded-md hover:bg-white/20 transition-colors">Profile</a>
-                        <a href="#" class="px-4 py-2 text-sm font-medium rounded-md hover:bg-white/20 transition-colors">Password</a>
-                        <a href="#" class="px-4 py-2 text-sm font-medium rounded-md hover:bg-white/20 transition-colors">Contact</a>
                     </nav>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -119,6 +116,39 @@
                 <h2 class="text-xl font-semibold text-gray-800">Student Information</h2>
             </div>
 
+            <!-- <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 mb-6">
+    <div class="px-6 py-5 border-b border-gray-100">
+        <h2 class="text-xl font-semibold text-gray-800">User Information</h2>
+    </div>
+    <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-lg font-medium text-gray-700 mb-4 pb-2 border-b border-gray-100">Account Details</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm text-gray-500">Name</p>
+                        <p class="font-medium">{{ Auth::user()->name }}</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Email</p>
+                        <p class="font-medium">{{ Auth::user()->email }}</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-medium text-gray-700 mb-4 pb-2 border-b border-gray-100">Status</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm text-gray-500">Student Profile</p>
+                        <p class="font-medium">
+                            {{ Auth::user()->student ? 'Completed' : 'Not Completed' }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
             @if(Auth::user()->student)
                 @php $student = Auth::user()->student; @endphp
                 <div class="p-6">
